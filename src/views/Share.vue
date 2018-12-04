@@ -7,5 +7,16 @@
       <router-link to="/">calculate</router-link>&nbsp;|
       <router-link to="/share">share</router-link>
     </p>
+    <Odds/>
   </div>
 </template>
+
+<script>
+import Odds from "@/components/Odds.vue";
+
+export default {
+  components: {
+    Odds
+  }
+};
+</script>

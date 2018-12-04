@@ -91,41 +91,6 @@ const getters = {
 
     const impliedodds = 100 / (100 * decimalOdds);
 
-
-    // const numerator = american.toFixed(0) / 10;
-    // const denominator = 1;
-    // let lnum = numerator;
-    // let ldenom = denominator;
-
-    // let frac = '';
-
-    // for (let i = 2; i <= 100; i++) {
-    //   if (lnum === Math.trunc(lnum)) {
-    //     frac = `${lnum}/${ldenom}`;
-    //   }
-    //   else {
-    //     lnum = numerator * i;
-    //     ldenom = denominator * i
-    //   }
-    // }
-
-    // let frac = 'floating point error';
-    // let numerator = decimalOdds.toFixed(2) - 1;
-    // let denominator = 1;
-
-    // let lnum = numerator;
-    // let ldenom = denominator;
-    // for (let i = 2; i <= 101; i++) {
-    //   const trunc = Math.trunc(lnum);
-    //   if (lnum === trunc) {
-    //     frac = `${lnum}/${ldenom}`;
-    //   }
-    //   else {
-    //     lnum = numerator * i;
-    //     ldenom = denominator * i
-    //   }
-    // }
-
     return {
       decimal: decimalOdds.toFixed(2),
       moneylineActual: american.toFixed(0),

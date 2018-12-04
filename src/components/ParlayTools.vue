@@ -1,7 +1,7 @@
 <template>
   <div class="parlaytools">
     <p class="text-center">
-      <router-link to="/">calculate</router-link>|
+      <router-link to="/">calculate</router-link>&nbsp;|
       <router-link to="/share">share</router-link>
     </p>
 
@@ -16,9 +16,9 @@
       </thead>
       <tbody>
         <tr>
-          <td colspan="4">
+          <td colspan="4" class="text-center">
             <button
-              class="btn btn-primary col-sm-6 offset-3"
+              class="btn btn-primary col-sm-12 col-lg-6 col-md-12"
               style="margin-top: 15px;"
               @click="addLegClick"
             >Add Leg</button>
@@ -28,13 +28,6 @@
       </tbody>
     </table>
 
-    <!-- <div class="row">
-      <button
-        class="btn btn-primary col-sm-6 offset-3"
-        style="margin-top: 15px;"
-        @click="addLegClick"
-      >Add Leg</button>
-    </div>-->
     <hr>
 
     <Odds/>

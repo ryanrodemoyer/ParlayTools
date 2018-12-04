@@ -28,14 +28,26 @@
       </div>
     </td>
     <td class="fullcenter">
-      <input type="text" :name="oddsname" :id="oddsname" v-model="localItemOdds" @blur="oddsBlur">
+      <!-- <div class="col-sm-1"> -->
+      <input
+        type="tel"
+        :name="oddsname"
+        :id="oddsname"
+        v-model="localItemOdds"
+        @blur="oddsBlur"
+        size="5"
+      >
+      <!-- </div> -->
     </td>
     <td class="fullcenter">
-      <div class="btn-group" role="group" aria-label="Actions" style="margin-bottom: 2px;">
-        <button type="button" class="btn btn-warning">Reset</button>
-        
-        <button type="button" class="btn btn-danger" v-if="oddsname === 'odds1'" disabled>Delete</button>
-        <button type="button" class="btn btn-danger" v-else @click="deleteClick">Delete</button>
+      <div style="margin-bottom: 2px;">
+        <!-- <button type="button" class="btn btn-danger" v-if="oddsname === 'odds1'" disabled>Delete</button> -->
+        <button
+          type="button"
+          class="btn btn-danger"
+          :disabled="oddsname === 'odds1'"
+          @click="deleteClick"
+        >Delete</button>
       </div>
     </td>
   </tr>
@@ -77,11 +89,6 @@ export default {
       });
     }
   },
-  // watch: {
-  //   localItemOdds: function(current, previous) {
-  //     alert(current);
-  //   }
-  // },
   computed: {
     ...mapGetters(["getItemById"]),
     radioname: function() {

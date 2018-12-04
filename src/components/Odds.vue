@@ -4,10 +4,7 @@
       <p class="text-center">
         <strong>payout moneyline</strong>
       </p>
-      <p class="text-center">
-        <!-- <span v-if="odds.moneyline > 0">+</span> -->
-        {{odds.moneyline}}
-      </p>
+      <p class="text-center">{{odds.moneyline}}</p>
     </div>
     <div class="col-sm-3">
       <p class="text-center">
@@ -27,8 +24,6 @@
       </p>
       <p class="text-center">{{odds.percentchance}}&#37;</p>
     </div>
-
-    <!-- <pre>{{ odds }}</pre> -->
   </div>
 </template>
 
