@@ -1,7 +1,7 @@
 <template>
   <tr>
-    <td>{{localItemName}}</td>
-    <td class="full-center">
+    <td style="vertical-align: middle">{{localItemName}}</td>
+    <td class="full-center" style="vertical-align: middle">
       <div class="form-check form-check-inline">
         <input
           class="form-check-input"
