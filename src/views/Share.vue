@@ -7,23 +7,38 @@
       <router-link to="/">calculate</router-link>&nbsp;|
       <router-link to="/share">share</router-link>
     </p>
+    <h3>Your Wagers</h3>
+    <!-- <table>
+      <tr v-for="item in items" :key="item.id">
+        <td>{{item.name}} @ {{item.odds > 0 ? `+${item.odds}` : item.odds}}</td>
+      </tr>
+    </table>-->
     <div class="row">
-      <div class="col-6 text-center">
+      <div
+        class="col-6"
+        v-for="item in items"
+        :key="item.id"
+      >{{item.name}} @ {{item.odds > 0 ? `+${item.odds}` : item.odds}}</div>
+    </div>
+    <hr>
+    <div class="row">
+      <!-- <div class="col-6 text-center"> -->
+      <display-moneyline/>
+      <display-fractional/>
+      <display-decimal/>
+      <display-implied/>
+      <!-- </div> -->
+    </div>
+  </div>
+
+  <!-- <div class="col-6 text-center">
         <ol>
           <li
             v-for="item in items"
             :key="item.id"
           >{{item.name}} @ {{item.odds > 0 ? `+${item.odds}` : item.odds}}</li>
         </ol>
-      </div>
-      <div class="col-6 text-center">
-        <display-moneyline/>
-        <display-fractional/>
-        <display-decimal/>
-        <display-implied/>
-      </div>
-    </div>
-  </div>
+  </div>-->
 </template>
 
 <script>
