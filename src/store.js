@@ -92,6 +92,8 @@ const getters = {
     const impliedodds = 100 / (100 * decimalOdds);
 
     return {
+      risk: 100,
+      payout: (100 * decimalOdds).toFixed(2),
       decimal: decimalOdds.toFixed(2),
       moneylineActual: american.toFixed(0),
       moneyline: american > 0 ? `+${american.toFixed(0)}` : american.toFixed(0),

@@ -5,6 +5,8 @@
       <router-link to="/share">share</router-link>
     </p>
 
+    <display-risk-win/>
+
     <table class="table">
       <thead>
         <tr>
@@ -45,6 +47,7 @@ import DisplayMoneyline from "@/components/DisplayMoneyline.vue";
 import DisplayImplied from "@/components/DisplayImplied.vue";
 import DisplayFractional from "@/components/DisplayFractional.vue";
 import DisplayDecimal from "@/components/DisplayDecimal.vue";
+import DisplayRiskWin from "@/components/DisplayRiskWin.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -53,7 +56,8 @@ export default {
     DisplayDecimal,
     DisplayImplied,
     DisplayFractional,
-    DisplayMoneyline
+    DisplayMoneyline,
+    DisplayRiskWin
   },
   props: {
     msg: String

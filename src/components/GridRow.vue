@@ -56,12 +56,10 @@
 <script>
 import { mapGetters } from "vuex";
 
-const namespace = "parlay";
-
 export default {
   name: "GridRow",
   props: {
-    itemId: 0
+    itemId: !0
   },
   data: function() {
     return {

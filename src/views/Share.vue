@@ -7,12 +7,8 @@
       <router-link to="/">calculate</router-link>&nbsp;|
       <router-link to="/share">share</router-link>
     </p>
+    <DisplayRiskWin/>
     <h3>Your Wagers</h3>
-    <!-- <table>
-      <tr v-for="item in items" :key="item.id">
-        <td>{{item.name}} @ {{item.odds > 0 ? `+${item.odds}` : item.odds}}</td>
-      </tr>
-    </table>-->
     <div class="row">
       <div
         class="col-6"
@@ -22,23 +18,12 @@
     </div>
     <hr>
     <div class="row">
-      <!-- <div class="col-6 text-center"> -->
-      <display-moneyline/>
-      <display-fractional/>
-      <display-decimal/>
-      <display-implied/>
-      <!-- </div> -->
+      <DisplayMoneyline/>
+      <DisplayFractional/>
+      <DisplayDecimal/>
+      <DisplayImplied/>
     </div>
   </div>
-
-  <!-- <div class="col-6 text-center">
-        <ol>
-          <li
-            v-for="item in items"
-            :key="item.id"
-          >{{item.name}} @ {{item.odds > 0 ? `+${item.odds}` : item.odds}}</li>
-        </ol>
-  </div>-->
 </template>
 
 <script>
@@ -46,6 +31,7 @@ import DisplayMoneyline from "@/components/DisplayMoneyline.vue";
 import DisplayImplied from "@/components/DisplayImplied.vue";
 import DisplayFractional from "@/components/DisplayFractional.vue";
 import DisplayDecimal from "@/components/DisplayDecimal.vue";
+import DisplayRiskWin from "@/components/DisplayRiskWin.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -53,7 +39,8 @@ export default {
     DisplayDecimal,
     DisplayImplied,
     DisplayFractional,
-    DisplayMoneyline
+    DisplayMoneyline,
+    DisplayRiskWin
   },
   computed: {
     ...mapGetters(["items"])

@@ -1,17 +1,13 @@
+
 <template>
-  <div class="col-sm-3 col-6">
-    <p class="text-center">
-      <strong>payout moneyline</strong>
-    </p>
-    <p class="text-center">{{odds.moneyline}}</p>
-  </div>
+  <p class="text-center">Risking ${{odds.risk}} to collect ${{odds.payout}}</p>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 
 export default {
-  name: "DisplayMoneyline",
+  name: "DisplayRiskWin",
   components: {},
   props: {},
   methods: {},
@@ -26,8 +22,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.fullcenter {
-  vertical-align: middle;
-  text-align: center;
-}
 </style>
