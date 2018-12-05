@@ -30,19 +30,30 @@
 
     <hr>
 
-    <Odds/>
+    <div class="row">
+      <display-moneyline/>
+      <display-fractional/>
+      <display-decimal/>
+      <display-implied/>
+    </div>
   </div>
 </template>
 
 <script>
 import GridRow from "@/components/GridRow.vue";
-import Odds from "@/components/Odds.vue";
+import DisplayMoneyline from "@/components/DisplayMoneyline.vue";
+import DisplayImplied from "@/components/DisplayImplied.vue";
+import DisplayFractional from "@/components/DisplayFractional.vue";
+import DisplayDecimal from "@/components/DisplayDecimal.vue";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
     GridRow,
-    Odds
+    DisplayDecimal,
+    DisplayImplied,
+    DisplayFractional,
+    DisplayMoneyline
   },
   props: {
     msg: String
