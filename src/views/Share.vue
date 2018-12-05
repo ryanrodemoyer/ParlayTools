@@ -18,7 +18,7 @@
         class="col-6"
         v-for="item in items"
         :key="item.id"
-      >{{item.name}} @ {{item.odds > 0 ? `+${item.odds}` : item.odds}}</div>
+      >{{item.name}} @ {{item.plusminus === '+' ? `+${item.odds}` : `-${item.odds}`}}</div>
     </div>
     <hr>
     <div class="row">
